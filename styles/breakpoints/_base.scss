@@ -229,4 +229,52 @@ img {
   }  
 }
 
+.footer {
+  
+  &__wrapper {
+    background-color: $cBgBlack;
+    color: $cWhite;
+    max-width: $contentMaxWidth;
+    padding: 30px 5%;
+  }
 
+  &__logo {
+    @extend .mb-sm;
+    text-align: center;
+  }
+
+  &__item {
+    @extend .mb-sm;
+
+    & ul {
+      @extend .font-sm;
+      line-height: 24px;
+      list-style: none;
+      padding: 0;
+
+      & li::before {
+        content: "-";
+        margin-right: 5px;
+      }
+    }
+    
+    &__title {
+      @extend .font-lr;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    &__text {
+      margin: 0;
+      line-height: 24px;
+      @extend .font-sm;
+    }
+  }
+
+  .copyrite {
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+    @extend .font-sm;
+  }
+}
