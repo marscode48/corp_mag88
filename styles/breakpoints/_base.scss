@@ -1,0 +1,239 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: normal;
+}
+// a {
+//   color: $cBlack;
+// }
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.font-sm {
+  font-size: 12px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-lr {
+  font-size: 16px;
+}
+.font-lg {
+  font-size: 24px;
+}
+.mb-sm {
+  margin-bottom: 30px;
+}
+.mb-lg {
+  margin-bottom: 80px;
+}
+
+// .pb-sm {
+//   padding-bottom: 16px !important;
+// }
+// .pb-lg {
+//   padding-bottom: 80px !important;
+// }
+.wrapper {
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+  padding: 0 5%;
+}
+.main-title {
+  @extend .font-lg;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+}
+.sub-title {
+  @extend .font-md;
+  @extend .mb-sm;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  margin-top: 30px;
+  color: $cBlack;
+  padding: 14px 36px;
+  border: 1px solid #2A2A2A;
+  text-decoration: none;
+  @extend .font-sm;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.7;
+    color: $cBlack;
+    text-decoration: none;
+  }
+}  
+
+.header {
+  background-image: url(/images/mainvisual.jpg);
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  @extend .mb-lg;
+
+  &__logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}
+
+.article {
+  text-align: center;
+  @extend .mb-lg;
+
+  &__flex {
+    @extend .flex;
+    margin-top: 40px;
+  }
+
+  &__item {
+    color: $cBlack;
+    width: 100%;
+    position: relative;
+    @extend .mb-sm;
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    max-width: 290px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    margin: 0 auto;
+    color: $cWhite;
+    opacity: 0.5;
+    font-weight: bold;
+    background-color: #707070;
+    cursor: pointer;
+
+    & p {
+      margin: 0;
+      @extend .font-md;
+
+      &:first-child {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+.fashion {
+  height: 520px;
+  text-align: center;
+  background-image: url(/images/fashion.jpg);
+  background-size: cover;
+  background-position: center top;
+  padding-top: 35px;
+  margin-bottom: 50px;
+
+  &__text {
+    @extend .font-md;
+    margin: 0;
+  }
+}
+
+.catalog-antique {
+  background-color: #F5F5F5;
+  padding: 30px 0;
+
+  &__flex {
+    @extend .flex;
+  }
+
+  &__item {
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 60px;
+    }
+  
+    & > img {
+      width: 100%;
+    }
+
+    & h2 {
+      margin-bottom: 40px;
+    }
+
+    & p:last-of-type {
+      margin: 0;
+    }
+  }
+  
+  &__text {
+    @extend .mb-sm;
+    @extend .font-md;
+    text-align: left;
+  }
+}
+
+.footer {
+  &__wrapper {
+    background-color: $cBgBlack;
+    color: $cWhite;
+    padding: 30px 5%;
+  }
+
+  &__flex {
+    @extend .flex;
+  }
+
+  &__logo {
+    @extend .mb-sm;
+    text-align: center;
+  }
+
+  &__item {
+    @extend .mb-sm;
+
+    & ul {
+      @extend .font-sm;
+      line-height: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      & li::before {
+        content: "-";
+        margin-right: 5px;
+      }
+    }
+    
+    &__title {
+      @extend .font-lr;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    &__text {
+      margin: 0;
+      line-height: 24px;
+      @extend .font-sm;
+    }
+  }
+
+  .copyrite {
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+    @extend .font-sm;
+  }
+}
